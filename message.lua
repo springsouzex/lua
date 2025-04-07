@@ -338,10 +338,12 @@ local tracer = nil
 local distanceText = nil
 local highlight = nil
 
-local Luna = loadstring(game:HttpGet("https://paste.ee/r/WSCKThwW", true))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_UI"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/InterfaceManager.lua"))()
 
 
-local Window = Luna:CreateWindow({
+local Window = Fluent:CreateWindow({
     Name = "The BillDev Hub (Blue Lock Rivals)",
     Subtitle = "by Galaxy/Jah/Whohurtyoudear",
     LogoID = "75237883871377",
@@ -356,7 +358,7 @@ local Window = Luna:CreateWindow({
 })
 
 Window:CreateHomeTab({
-    SupportedExecutors = {"Delta", "Fluxus", "Codex", "Cryptic", "Vegax", "Trigon", "Synapse X", "Script-Ware", "KRNL", "Seliware", "Solara", "Xeno", "ZORARA", "Luna", "Nihon", "JJsploit", "AWP", "Wave", "Ronix"},
+    SupportedExecutors = {"Delta", "Fluxus", "Codex", "Cryptic", "Vegax", "Trigon", "Synapse X", "Script-Ware", "KRNL", "Seliware", "Solara", "Xeno", "ZORARA", "Fluent", "Nihon", "JJsploit", "AWP", "Wave", "Ronix"},
     DiscordInvite = "https://discord.gg/D3T4ArjBqk",
     Icon = 75237883871377,
 })
@@ -739,7 +741,7 @@ UITab:CreateButton({
         for _, connection in pairs(getconnections(game:GetService("CoreGui").ChildAdded)) do
             connection:Disable()
         end
-        game:GetService("CoreGui").Luna:Destroy()
+        game:GetService("CoreGui").Fluent:Destroy()
     end
 })
 
@@ -754,7 +756,7 @@ UITab:BuildThemeSection()
 
 
 UITab:BuildConfigSection()
-Luna:Notification({
+Fluent:Notification({
     Title = "Config Loaded",
     Content = "Your saved configuration has been automatically loaded.",
     Icon = "check_circle",
